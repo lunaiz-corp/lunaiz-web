@@ -6,10 +6,10 @@ import {RouterLink} from 'vue-router'
 
   <nav class="border-gray-200 dark:bg-gray-900 dark:border-gray-700">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/" class="flex items-center rtl:space-x-reverse">
+      <RouterLink to="/" class="flex items-center rtl:space-x-reverse">
         <img src="https://cdn.lunaiz.com/lunaiz_logo/logo-l.svg" class="h-9 block dark:hidden" alt="lunaiz logo" />
         <img src="https://cdn.lunaiz.com/lunaiz_logo/logo-d.svg" class="h-9 hidden dark:block" alt="lunaiz logo" />
-      </a>
+      </RouterLink>
       <button data-collapse-toggle="navbar-coll" type="button"
         class="inline-flex items-center p-2 w-10 h-10 z-50 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-dropdown" aria-expanded="false">
@@ -31,11 +31,11 @@ import {RouterLink} from 'vue-router'
               class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                 <li>
-                  <RouterLink to="/"
+                  <RouterLink to="/info/ci"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">CI</RouterLink>
                 </li>
                 <li>
-                  <RouterLink to="/"
+                  <RouterLink to="/info/director"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">임원</RouterLink>
                 </li>
               </ul>
@@ -50,12 +50,12 @@ import {RouterLink} from 'vue-router'
               class="z-10 hidden font-normal  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                 <li>
-                  <RouterLink to="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AM
-                    to MXM</RouterLink>
+                  <a href="https://am-to-mxm.lunaiz.com" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AM
+                    to MXM</a>
                 </li>
                 <li>
-                  <RouterLink to="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">보겸
-                    당첨 알리미</RouterLink>
+                  <a href="https://bk.lunaiz.com" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">보겸
+                    당첨 알리미</a>
                 </li>
               </ul>
             </div>
@@ -69,18 +69,18 @@ import {RouterLink} from 'vue-router'
               class="z-10 hidden font-normal  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                 <li>
-                  <RouterLink to="/"
+                  <RouterLink to="/media/notice"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">공지사항</RouterLink>
                 </li>
                 <li>
-                  <RouterLink to="/"
+                  <RouterLink to="/media/pr"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">보도자료</RouterLink>
                 </li>
               </ul>
             </div>
           </li>
           <li>
-            <RouterLink to="/"
+            <RouterLink to="/partner"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">파트너</RouterLink>
           </li>
           <li class="hidden md:block">
