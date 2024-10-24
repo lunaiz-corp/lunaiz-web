@@ -12,14 +12,14 @@ import Hero from '../components/hero.vue'
     <div class="flex flex-wrap" style="border-top: 1px solid #000; border-bottom: 1px solid #000;">
         <div class="" style="border-right: 1px solid #000;">
             <p class="">ci</p>
-            <img class="max-w-45" src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" />
         </div>
         <div>
             <p class="">symbol</p>
             <img class="" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
             <hr style="opacity: 1;" class="">
             <p class="">wordmark</p>
-            <img class="max-w-45" src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" />
         </div>
     </div>
     <div class="flex flex-wrap">
