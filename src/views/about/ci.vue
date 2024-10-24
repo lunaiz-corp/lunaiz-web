@@ -34,13 +34,13 @@ import Hero from '../../components/hero.vue'
     </div>
     <div class="flex flex-wrap" style="border-bottom: 1px solid #000;">
         <div class="">
-            <img class="" src="https://cdn.lunaiz.com/lunaiz_assets/color_white.png" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_assets/color_white.png" />
         </div>
         <div class="">
-            <img class="" src="https://cdn.lunaiz.com/lunaiz_assets/color_black.png" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_assets/color_black.png" />
         </div>
         <div class="">
-            <img class="" src="https://cdn.lunaiz.com/lunaiz_assets/color_lunaizblue.png" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_assets/color_lunaizblue.png" />
         </div>
     </div>
   </main>
