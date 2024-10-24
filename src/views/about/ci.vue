@@ -17,11 +17,11 @@ import Hero from '../../components/hero.vue'
         </div>
         <div class="ml-[1rem]">
             <p class="text-2xl">symbol</p>
-            <img class="mr-[1rem] mt-[1rem] max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
+            <img class="mr-[1rem] my-[1rem] max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
             <hr class="h-px my-8 bg-gray-900 border-0 dark:bg-gray-300">
             <p class="text-2xl">wordmark</p>
-            <img src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" class="mr-[1rem] mt-[1rem] max-w-[45%] block dark:hidden" alt="lunaiz wordmark" />
-            <img src="https://cdn.lunaiz.com/lunaiz_logo/text-d.svg" class="mr-[1rem] mt-[1rem] max-w-[45%] hidden dark:block" alt="lunaiz wordmark" />
+            <img src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" class="mr-[1rem] my-[1rem] max-w-[45%] block dark:hidden" alt="lunaiz wordmark" />
+            <img src="https://cdn.lunaiz.com/lunaiz_logo/text-d.svg" class="mr-[1rem] my-[1rem] max-w-[45%] hidden dark:block" alt="lunaiz wordmark" />
         </div>
     </div>
     <div class="flex flex-wrap justify-between mt-[1rem] pt-[1rem] border-t border-gray-900">
