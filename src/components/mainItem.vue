@@ -5,14 +5,14 @@
         <slot name="img"/>
       </div>
       <div>
-        <h1 class="text-3xl font-bold" slot="title">
-        
+        <h1 class="text-3xl font-bold">
+          <slot name="title"/>
         </h1>
-        <p class="text-xl mt-2" slot="desc-1">
-          
+        <p class="text-xl mt-2">
+          <slot name="desc-1"/>
         </p>
-        <p class="text-xl mt-2" slot="desc-2">
-          
+        <p class="text-xl mt-2">
+          <slot name="desc-2"/>
         </p>
       </div>
     </div>
