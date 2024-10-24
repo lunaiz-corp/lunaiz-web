@@ -10,7 +10,7 @@ import Hero from '../../components/hero.vue'
 
   <main class="text-black dark:text-white max-w-screen-xl items-center justify-around mx-auto p-4">
     <div class="flex flex-initial columns-2">
-        <div class="border-r border-gray-900">
+        <div class="border-r border-gray-900 dark:border-gray-300">
             <p class="text-2xl">ci</p>
             <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" class="max-w-[45%] block dark:hidden" alt="lunaiz ci" />
             <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t-d.png" class="max-w-[45%] hidden dark:block" alt="lunaiz ci" />
@@ -24,7 +24,7 @@ import Hero from '../../components/hero.vue'
             <img src="https://cdn.lunaiz.com/lunaiz_logo/text-d.svg" class="mr-[1rem] my-[1rem] max-w-[45%] hidden dark:block" alt="lunaiz wordmark" />
         </div>
     </div>
-    <div class="flex flex-wrap justify-between mt-[1rem] pt-[1rem] border-t border-gray-900">
+    <div class="flex flex-wrap justify-between mt-[1rem] pt-[1rem] border-t border-gray-900 dark:border-gray-300">
         <div class="col-8 d-grid">
             <p class="text-2xl">color.</p>
         </div>
