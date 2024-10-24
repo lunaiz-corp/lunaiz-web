@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="block mx-auto justify-items-center min-w-[30rem] max-w-[50rem] mt-[5rem] text-black dark:text-white">
+  <div class="block mx-auto justify-items-center min-w-[20rem] max-w-[50rem] mt-[5rem] text-black dark:text-white">
     <div class="flex flex-wrap mx-auto justify-start">
       <div class="mr-[4rem]">
         <slot name="img"/>

@@ -17,6 +17,11 @@ const router = createRouter({
       component: () => import('../views/about/ci.vue')
     },
     {
+      path: '/about/director',
+      name: 'Director',
+      component: () => import('../views/about/director.vue')
+    },
+    {
       path: '/media/notice',
       name: 'Notice',
       component: () => import('../views/media/notice.vue')
