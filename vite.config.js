@@ -21,9 +21,10 @@ export default defineConfig({
       credentials: true, // 자격 증명 허용
     },
     proxy: {
-      '/': {
+      '/cdn': {
         target: 'https://cdn.lunaiz.com',
-        changeOrigin: true, // 필요에 따라 추가
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/cdn/, ''), // '/cdn'로 시작하는 요청을 '/lunaiz_assets/...'로 변환
       },
     },
   }
