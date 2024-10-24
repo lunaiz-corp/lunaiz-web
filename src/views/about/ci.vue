@@ -15,10 +15,10 @@ import Hero from '../../components/hero.vue'
             <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" class="max-w-[35%] block dark:hidden" alt="lunaiz ci" />
             <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t-d.png" class="max-w-[35%] hidden dark:block" alt="lunaiz ci" />
         </div>
-        <div class="ml-[1rem]">
+        <div class="ml-[1rem] min-w-[30rem]">
             <p class="text-2xl">symbol</p>
             <img class="mr-[1rem] my-[1rem] max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
-            <hr class="h-px my-8 bg-gray-900 border-0 dark:bg-gray-300">
+            <hr class="h-px my-2 bg-gray-900 border-0 dark:bg-gray-300">
             <p class="text-2xl">wordmark</p>
             <img src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" class="mr-[1rem] my-[1rem] max-w-[45%] block dark:hidden" alt="lunaiz wordmark" />
             <img src="https://cdn.lunaiz.com/lunaiz_logo/text-d.svg" class="mr-[1rem] my-[1rem] max-w-[45%] hidden dark:block" alt="lunaiz wordmark" />
