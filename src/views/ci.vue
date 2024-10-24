@@ -16,10 +16,10 @@ import Hero from '../components/hero.vue'
         </div>
         <div>
             <p class="">symbol</p>
-            <img class="" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
             <hr style="opacity: 1;" class="">
             <p class="">wordmark</p>
-            <img class="max-w-[30%]" src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" />
+            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" />
         </div>
     </div>
     <div class="flex flex-wrap">
