@@ -15,17 +15,10 @@ export default defineConfig({
   },
   server: {
     cors: {
-      origin: 'https://cdn.lunaiz.com', // 허용할 출처
+      origin: '*', // 허용할 출처
       methods: ['GET', 'POST'], // 허용할 HTTP 메서드
       allowedHeaders: ['Content-Type'], // 허용할 헤더
       credentials: true, // 자격 증명 허용
-    },
-    proxy: {
-      '/cdn': {
-        target: 'https://cdn.lunaiz.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/cdn/, ''), // '/cdn'로 시작하는 요청을 '/lunaiz_assets/...'로 변환
-      },
     },
   }
 })
