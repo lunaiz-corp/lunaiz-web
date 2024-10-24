@@ -20,7 +20,8 @@ import Hero from '../../components/hero.vue'
             <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.png" />
             <hr style="opacity: 1;" class="">
             <p class="text-lg">wordmark</p>
-            <img class="max-w-[45%]" src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" />
+            <img src="https://cdn.lunaiz.com/lunaiz_logo/text-l.svg" class="max-w-[45%] block dark:hidden" alt="lunaiz wordmark" />
+            <img src="https://cdn.lunaiz.com/lunaiz_logo/text-d.svg" class="max-w-[45%] hidden dark:block" alt="lunaiz wordmark" />
         </div>
     </div>
     <div class="flex flex-wrap">
