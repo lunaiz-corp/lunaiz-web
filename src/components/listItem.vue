@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-wrap">
-        <div class="block mx-auto min-w-[30rem] max-w-[50rem]">
+        <div class="block mx-auto min-w-[30rem] max-w-[50rem] text-black dark:text-white">
             <div class="flex flex-wrap justify-start">
                 <div class="mr-[4rem]">
                     <slot name="img" />
