@@ -53,10 +53,10 @@ import {RouterLink} from 'vue-router'
                   <a href="https://am-to-mxm.lunaiz.com" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AM
                     to MXM</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="https://bk.lunaiz.com" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">보겸
                     당첨 알리미</a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
