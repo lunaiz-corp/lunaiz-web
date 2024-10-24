@@ -21,9 +21,9 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
     themeToggleDarkIcon.classList.remove('hidden');
 }
 
-var themeToggleBtn = document.getElementById('theme-toggle-1');
+var themeToggleBtn1 = document.getElementById('theme-toggle-1');
 
-themeToggleBtn.addEventListener('click', function() {
+themeToggleBtn1.addEventListener('click', function() {
 
     // toggle icons inside button
     themeToggleDarkIcon.classList.toggle('hidden');
@@ -52,19 +52,10 @@ themeToggleBtn.addEventListener('click', function() {
     
 });
 
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    themeToggleLightIcon.classList.remove('hidden');
-} else {
-    themeToggleDarkIcon.classList.remove('hidden');
-}
+var themeToggleBtn2 = document.getElementById('theme-toggle-2');
 
-var themeToggleBtn = document.getElementById('theme-toggle-2');
-
-themeToggleBtn.addEventListener('click', function() {
+themeToggleBtn2.addEventListener('click', function() {
 
     // toggle icons inside button
     themeToggleDarkIcon.classList.toggle('hidden');
