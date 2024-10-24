@@ -13,7 +13,7 @@ import Hero from '../../components/hero.vue'
         <div class="" style="border-right: 1px solid #000;">
             <p class="text-lg">ci</p>
             <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" class="max-w-[45%] block dark:hidden" alt="lunaiz ci" />
-            <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" class="max-w-[45%] hidden dark:block" alt="lunaiz ci" />
+            <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t-d.png" class="max-w-[45%] hidden dark:block" alt="lunaiz ci" />
         </div>
         <div>
             <p class="text-lg">symbol</p>
