@@ -13,7 +13,7 @@
                         and this is a description
                     </p>
                     <p class="text-base mt-2">
-                        0000.00.00. 오X 00:00
+                        0000.00.00. OO 00:00
                     </p>
                 </div>
             </div>
