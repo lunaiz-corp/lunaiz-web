@@ -10,10 +10,10 @@ import Hero from '../../components/hero.vue'
 
   <main class="text-black dark:text-white max-w-screen-xl items-center justify-around mx-auto p-4">
     <div class="flex flex-initial columns-2">
-        <div class="max-w-fit border-r border-gray-900">
+        <div class="border-r border-gray-900">
             <p class="text-2xl">ci</p>
-            <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" class="max-w-[45%] block dark:hidden" alt="lunaiz ci" />
-            <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t-d.png" class="max-w-[45%] hidden dark:block" alt="lunaiz ci" />
+            <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t.png" class="max-w-[35%] block dark:hidden" alt="lunaiz ci" />
+            <img src="https://cdn.lunaiz.com/lunaiz_assets/lunaiz_banner_t-d.png" class="max-w-[35%] hidden dark:block" alt="lunaiz ci" />
         </div>
         <div class="ml-[1rem]">
             <p class="text-2xl">symbol</p>
