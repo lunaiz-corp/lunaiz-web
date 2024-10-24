@@ -1,6 +1,7 @@
 <script setup>
 import Hero from '../../components/hero.vue'
 import listItem from '../../components/listItem.vue'
+import Pagination from '../../components/pagination.vue'
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import listItem from '../../components/listItem.vue'
         <listItem>
             <template #img><img class="h-[7.5rem] rounded" src="https://cdn.lunaiz.com/IMG.svg"></template>
         </listItem>
+        <Pagination/>
     </main>
 </template>
