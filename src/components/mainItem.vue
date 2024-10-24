@@ -5,7 +5,8 @@
         <slot name="img"/>
       </div>
       <div>
-        <h1 class="text-3xl font-bold">
+        <slot name="my"/>
+        <!-- <h1 class="text-3xl font-bold">
           <slot name="title"/>
         </h1>
         <p class="text-xl mt-2">
@@ -13,7 +14,7 @@
         </p>
         <p class="text-xl mt-2">
           <slot name="desc-2"/>
-        </p>
+        </p> -->
       </div>
     </div>
   </div>

@@ -31,11 +31,11 @@ import {RouterLink} from 'vue-router'
               class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                 <li>
-                  <RouterLink to="/info/ci"
+                  <RouterLink to="/about/ci"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">CI</RouterLink>
                 </li>
                 <li>
-                  <RouterLink to="/info/director"
+                  <RouterLink to="/about/director"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">임원</RouterLink>
                 </li>
               </ul>
