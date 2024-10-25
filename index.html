@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <title>lunaiz.</title>
-    <link rel="icon" href="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.svg">
-    <link rel="stylesheet" href="https://cdn.lunaiz.com/lunaiz_assets/ProductSans/stylesheet.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eunchurn/NanumSquareNeo@0.0.6/nanumsquareneovar.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-      } else {
-          document.documentElement.classList.remove('dark')
-      }
+
+<head>
+  <meta charset="UTF-8">
+  <title>lunaiz.</title>
+  <meta name="description" content="our light illuminates your night." />
+  <meta name="author" content="lunaiz" />
+  <meta name="theme-color" content="#06A3FF" />
+  <meta name="color" content="#06A3FF" />
+  <meta name="og:image" content="https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png" />
+  <meta name="keywords"
+    content="lunaiz, lunaiz corp, lunaiz corporation, lunaiz company, lunaiz official, lunaiz
+    website, lunaiz homepage, lunaiz home, lunaiz main, lunaiz main page, lunaiz mainpage, lunaiz main page, lunaiz, 루나이즈, 루나이즈 홈페이지, 주식회사 루나이즈, 루나이즈 컴퍼니, 루나이즈 계정, 루나이즈 회사, 루나이즈 사이트, 손지민">
+  <link rel="icon" href="https://cdn.lunaiz.com/lunaiz_logo/icon-xl.svg">
+  <link rel="stylesheet" href="https://cdn.lunaiz.com/lunaiz_assets/ProductSans/stylesheet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eunchurn/NanumSquareNeo@0.0.6/nanumsquareneovar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-2564354188424655" />
+  <meta name="naver-site-verification" content="a11f6c246ee5a637aaddc5d09559fccee4e90070" />
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
   </script>
-  </head>
-  <body class="min-h-screen bg-[#f9f9f9] border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-[#f9f9f9] border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
 </html>
