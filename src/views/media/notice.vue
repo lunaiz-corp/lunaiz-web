@@ -10,7 +10,7 @@ import Pagination from '../../components/pagination.vue'
 
     </Hero>
 
-    <main class="max-w-screen-xl items-center justify-around mx-auto p-4">
+    <main class="container max-w-screen-xl items-center justify-around mx-auto p-4">
         <listItem title="This is a title" descOne="and this is a description" date="0000.00.00. OO 00:00">
             <template #img><img class="h-[7.5rem] rounded" src="https://cdn.lunaiz.com/IMG.svg"></template>
         </listItem>

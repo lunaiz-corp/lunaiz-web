@@ -10,7 +10,7 @@ import mainItem from '../components/mainItem.vue'
 
   </Hero>
 
-  <main class="max-w-screen-xl items-center justify-around mx-auto p-4">
+  <main class="container max-w-screen-xl items-center justify-around mx-auto p-4">
     <div class="w-full">
       <mainItem title="DNN" descOne="대한민국 언론의 혁신" descTwo="Digital News Network">
         <template #img><img class="h-[6rem] rounded align-middle"

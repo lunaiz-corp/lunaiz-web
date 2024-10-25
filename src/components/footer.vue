@@ -1,5 +1,5 @@
 <template>
-    <div class="flex mt-[7.5rem] border-gray-200 text-black dark:text-gray-400 dark:bg-gray-900 dark:border-gray-700 max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4">
+    <div class="container flex mt-[7.5rem] border-gray-200 text-black dark:text-gray-400 dark:bg-gray-900 dark:border-gray-700 max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4">
         <div class="">
             <a class="" href="/"><img src="https://cdn.lunaiz.com/lunaiz_logo/logo-l.svg" class="h-9 block dark:hidden" alt="lunaiz logo" />
                 <img src="https://cdn.lunaiz.com/lunaiz_logo/logo-d.svg" class="h-9 hidden dark:block" alt="lunaiz logo" /></a>

@@ -8,7 +8,7 @@ import Hero from '../../components/hero.vue'
     <template #head-txt>introducing our ci</template>
   </Hero>
 
-  <main class="text-black dark:text-white max-w-screen-xl items-center justify-around mx-auto p-4">
+  <main class="container text-black dark:text-white max-w-screen-xl items-center justify-around mx-auto p-4">
     <div class="flex flex-initial columns-2">
         <div class="border-r border-gray-900 dark:border-gray-300">
             <p class="text-2xl">ci</p>

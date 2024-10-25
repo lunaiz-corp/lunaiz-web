@@ -10,7 +10,7 @@ import listItem from '../../components/listItem.vue'
 
   </Hero>
 
-  <main class="max-w-screen-xl items-center justify-around mx-auto p-4">
+  <main class="container max-w-screen-xl items-center justify-around mx-auto p-4">
     <div class="w-full">
       <listItem title="손지민 &nbsp;&nbsp;[ SSS1267_ ]" descOne="#기획 #운영 #UI/UX #FrontEnd">
         <template #img><h1 class="text-4xl font-bold mx-auto align-middle">C E O</h1><p class="text-lg w-full text-center">대표이사</p></template>
