@@ -21,7 +21,7 @@ defineProps({
       <div class="mx-auto md:ml-0 md:mr-[4rem]">
         <slot name="img"/>
       </div>
-      <div class="mx-auto md:m-0 text-center md:text-start mt-4 md:mt-0">
+      <div class="mx-auto md:m-0 min-w-full md:min-w-0 text-center md:text-start mt-4 md:mt-0">
         <h1 class="text-2xl md:text-3xl font-bold">
           {{ title }}
         </h1>
