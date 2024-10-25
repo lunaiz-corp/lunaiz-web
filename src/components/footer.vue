@@ -30,8 +30,9 @@
             </div>
             <p class="mt-2 md:mt-0 text-center">Ⓒ 2024 lunaiz, all rights reserved.
             </p>
-            <div class="mt-6 hidden md:block"><img class="mx-auto"
-                    src="https://cdn.lunaiz.com/lunaiz_assets/dokdo.svg" />
+            <div class="mt-6 hidden md:block"><img class="block dark:hidden mx-auto"
+                    src="https://cdn.lunaiz.com/lunaiz_assets/dokdo.svg" /><img class="hidden dark:block mx-auto"
+                    src="https://cdn.lunaiz.com/lunaiz_assets/dokdo-d.svg" />
             </div>
         </div>
     </div>
