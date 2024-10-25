@@ -1,7 +1,7 @@
 {
-  "name": "lunaiz-pr-2",
-  "version": "0.0.0",
-  "private": true,
+  "name": "lunaiz-web",
+  "version": "1.0.0",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
