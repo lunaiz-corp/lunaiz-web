@@ -31,13 +31,13 @@ import Hero from '../../components/hero.vue'
     </div>
     <div class="flex flex-initial columns-3 mt-[1rem] pb-[2rem] justify-between">
         <div class="">
-            <img class="max-w-[45%] mx-auto" src="https://cdn.lunaiz.com/lunaiz_assets/color_white.png" />
+            <img class="max-w-[60%] md:max-w-[45%] mx-auto" src="https://cdn.lunaiz.com/lunaiz_assets/color_white.png" />
         </div>
         <div class="">
-            <img class="max-w-[45%] mx-auto" src="https://cdn.lunaiz.com/lunaiz_assets/color_black.png" />
+            <img class="max-w-[60%] md:max-w-[45%] mx-auto" src="https://cdn.lunaiz.com/lunaiz_assets/color_black.png" />
         </div>
         <div class="">
-            <img class="max-w-[45%] mx-auto" src="https://cdn.lunaiz.com/lunaiz_assets/color_lunaizblue.png" />
+            <img class="max-w-[60%] md:max-w-[45%] mx-auto" src="https://cdn.lunaiz.com/lunaiz_assets/color_lunaizblue.png" />
         </div>
     </div>
   </main>
