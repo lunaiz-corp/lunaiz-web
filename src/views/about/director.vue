@@ -21,7 +21,7 @@ import listItem from '../../components/listItem.vue'
       <listItem title="권민석 &nbsp;&nbsp;[ MinSeok_P ]" descOne="#Network #Security #BackEnd">
         <template #img><h1 class="text-4xl font-bold mx-auto align-middle">C T O</h1><p class="text-lg w-full text-center">기술이사</p></template>
       </listItem>
-      <listItem title="김민수 &nbsp;&nbsp;[ Ayaan ]" descOne="#기획 #FullStack">
+      <listItem title="김민수 &nbsp;&nbsp;[ Ayaan ]" descOne="#기획 #UI/UX #FullStack">
         <template #img><h1 class="text-4xl font-bold mx-auto align-middle">C S O</h1><p class="text-lg w-full text-center">전략이사</p></template>
       </listItem>
       <listItem title="하승민 &nbsp;&nbsp;[ NOCSML70 ]" descOne="#기획 #FullStack">
