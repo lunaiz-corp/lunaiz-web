@@ -37,6 +37,11 @@ const router = createRouter({
       component: () => import('../views/partner.vue')
     },
     {
+      path: '/media/notices/:id',
+      name: 'NoticeDetail',
+      component: () => import('../views/media/noticeView.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       redirect: "/404"
     },

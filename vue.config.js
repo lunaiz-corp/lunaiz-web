@@ -9,6 +9,10 @@ module.exports = {
                 target: 'https://cdn.lunaiz.com',
                 changeOrigin: true, // 호스트 헤더를 타겟 URL로 변경
                 pathRewrite: { '^/cdn': '' }, // '/cdn' 경로를 제거
+            },
+            '/api': {
+                target: 'https://api.lunaiz.com',
+                changeOrigin: true
             }
         }
     }
