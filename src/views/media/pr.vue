@@ -1,7 +1,51 @@
+<template>
+    <Hero>
+        <template #head-txt>press release</template>
+    </Hero>
+
+    <div class="container max-w-screen-md mx-auto p-4">
+        <main v-if="prs.length" class="space-y-3">
+            <RouterLink 
+                v-for="pr in paginatedPrs" 
+                :key="pr.id" 
+                :to="`/media/prs/` + pr.id" 
+                class="block"
+            >
+                <listItem 
+                    :title="pr.title" 
+                    :descOne="getPreview(pr.content)"
+                    :date="formattedDate(pr.createdAt)"
+                    :author="pr.author"
+                >
+                    <template #img>
+                        <img 
+                            v-if="pr.banner_image" 
+                            :src="pr.banner_image" 
+                            alt="Press Release Image" 
+                            class="h-20 w-20 object-cover rounded"
+                        />
+                    </template>
+                </listItem>
+            </RouterLink>
+            
+            <Pagination 
+                :totalItems="prs.length" 
+                :current-page="currentPage" 
+                :items-per-page="pressReleasesPerPage" 
+                @page-changed="changePage" 
+                class="mt-8"
+            />
+        </main>
+        
+        <h1 v-else class="text-2xl text-center font-bold">No Press Releases are found</h1>
+    </div>
+</template>
+
 <script setup>
 import Hero from '../../components/hero.vue'
-import ListItem from '../../components/listItem.vue'
+import listItem from '../../components/listItem.vue'
 import Pagination from '../../components/pagination.vue'
+import { RouterLink } from 'vue-router'
 import { ref, onMounted, computed } from 'vue'
 import moment from 'moment'
 import axios from 'axios'
@@ -13,9 +57,11 @@ const pressReleasesPerPage = 5
 const fetchPrs = async () => {
     try {
         const response = await axios.get('https://api.lunaiz.com/api/v1/press-release')
-        prs.value = response.data
+        prs.value = response.data.sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        )
     } catch (error) {
-        console.error('Error fetching prs:', error)
+        console.error('Error fetching press releases:', error)
     }
 }
 
@@ -26,33 +72,24 @@ const formattedDate = (createdAt) => {
     return `${date.format('YYYY년 MM월 DD일')} ${ampm} ${hours % 12 || 12}시 ${date.minutes()}분`
 }
 
-const changePage = (page) => {
-    if (page < 1 || page > Math.ceil(prs.value.length / pressReleasesPerPage)) {
-        return
-    }
-    currentPage.value = page
+const getPreview = (content) => {
+    const maxLength = 20
+    return content.length > maxLength ? content.slice(0, maxLength) + '...' : content
 }
 
-const currentPressReleases = computed(() => {
+const paginatedPrs = computed(() => {
     const startIndex = (currentPage.value - 1) * pressReleasesPerPage
-    return prs.value.slice(startIndex, startIndex + pressReleasesPerPage)
+    const endIndex = startIndex + pressReleasesPerPage
+    return prs.value.slice(startIndex, endIndex)
 })
+
+const totalPages = computed(() => Math.ceil(prs.value.length / pressReleasesPerPage))
+
+const changePage = (page) => {
+    if (page >= 1 && page <= totalPages.value) {
+        currentPage.value = page
+    }
+}
 
 onMounted(fetchPrs)
 </script>
-
-<template>
-    <Hero>
-        <template #head-txt>Press Release</template>
-    </Hero>
-
-    <main class="container max-w-screen-xl items-center justify-around mx-auto p-4" v-if="prs.length">
-        <RouterLink :to="`/media/prs/` + pr.id" v-for="pr in currentPressReleases" :key="pr.id">
-            <ListItem id="pr-list-item" :title="pr.title" :descOne="pr.content" :date="formattedDate(pr.createdAt)">
-                <template #img><img class="h-[7.5rem] rounded" :src="pr.banner_image"></template>
-            </ListItem>
-        </RouterLink>
-        <Pagination :current-page="currentPage" :totalItems="prs.length" :items-per-page="pressReleasesPerPage" @page-changed="changePage" />
-    </main>
-    <h1 class="text-2xl text-center font-bold" v-else>No Press Releases are found</h1>
-</template>

@@ -1,40 +1,50 @@
 <script setup>
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true
   },
   descOne: {
     type: String,
-    required: false
+    default: ''
   },
   date: {
     type: String,
-    required: false
+    default: ''
+  },
+  author: {
+    type: String,
+    default: ''
   }
-})
+});
 </script>
 
 <template>
-    <div class="flex flex-wrap mt-[4rem] md:mt-[2rem]">
-        <div class="block mx-auto max-w-full md:min-w-[30rem] md:max-w-[70rem] text-black dark:text-white">
-            <div class="flex flex-wrap justify-self-start justify-start">
-                <div class="mx-auto md:ml-0 md:mr-[3rem]">
-                    <slot name="img" />
-                </div>
-                <div class="mx-auto mt-4 min-w-full md:min-w-0 md:m-0 text-center md:text-left">
-                    <h1 class="text-xl md:text-2xl font-bold break-keep">
-                        {{ title }}
-                    </h1>
-                    <p class="text-lg md:text-xl mt-1 md:mt-2 break-keep">
-                        {{ descOne }}
-                    </p>
-                    <p class="text-base md:text-lg mt-1 md:mt-2 break-keep">
-                        {{ date }}
-                    </p>
-                </div>
-            </div>
+    <div class="flex items-start p-4 max-w-screen-md mx-auto border-b border-gray-300">
+        <!-- 텍스트 콘텐츠 -->
+        <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-bold break-keep">{{ title }}</h1>
+            <p v-if="date || author" class="text-base mt-1 text-gray-600">
+                <span v-if="author" class="font-semibold">{{ author }}</span>
+                <span v-if="author && date"> | </span>
+                <span v-if="date">{{ date }}</span>
+            </p>
+            <p v-if="descOne" class="text-lg mt-1 text-gray-700 truncate-content">{{ descOne }}</p>
         </div>
 
+        <!-- 이미지 슬롯 -->
+        <div class="flex-shrink-0 ml-4">
+            <slot name="img" />
+        </div>
     </div>
 </template>
+
+<style scoped>
+/* descOne 텍스트를 한 줄로 제한하고 넘칠 경우 줄임표 추가 */
+.truncate-content {
+    max-width: calc(100% - 5rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</style>
