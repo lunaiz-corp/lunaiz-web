@@ -54,8 +54,8 @@ const fetchNotices = async () => {
 const formattedDate = (createdAt) => {
     const date = moment(createdAt)
     const hours = date.hours()
-    const ampm = hours < 12 ? '오전' : '오후'
-    return `${date.format('YYYY년 MM월 DD일')} ${ampm} ${hours % 12 || 12}시 ${date.minutes()}분`
+    const ampm = hours < 12 ? 'AM' : 'PM'
+    return `${date.format('YYYY.MM.DD.')} ${hours % 12 || 12}:${date.minutes()}  ${ampm}`
 }
 
 const getPreview = (content) => {
