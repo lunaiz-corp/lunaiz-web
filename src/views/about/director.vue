@@ -4,49 +4,49 @@ import hero from '../../components/hero.vue';
 const leaders = [
   {
     name: "손지민 [ SSS1267_ ]",
-    title: "CEO / 대표이사",
+    title: "CEO 대표이사",
     skills: "#기획 #UI/UX #FrontEnd",
     description: "",
     sns: [
-      { platform: "LinkedIn", url: "https://linkedin.com/in/sss1267", icon: "bi-linkedin" },
-      { platform: "Twitter", url: "https://twitter.com/sss1267", icon: "bi-twitter" }
+      { platform: "Instagram", url: "https://instagram.com/sss1267_", icon: "bi-instagram" },
+      { platform: "Github", url: "https://github.com/Dev-SSS1267", icon: "bi-github" }
     ]
   },
   {
     name: "유정호 [ Ddongddi ]",
-    title: "COO / 운영이사",
+    title: "COO 운영이사",
     skills: "#기획 #감사 #FrontEnd",
     description: "",
     sns: [
-      { platform: "LinkedIn", url: "https://linkedin.com/in/ddongddi", icon: "bi-linkedin" }
+      { platform: "Github", url: "https://github.com/Ddongddi", icon: "bi-github" }
     ]
   },
   {
     name: "권민석 [ MinSeok_P ]",
-    title: "CTO / 기술이사",
+    title: "CTO 기술이사",
     skills: "#Network #Security #BackEnd",
     description: "",
     sns: [
-      { platform: "GitHub", url: "https://github.com/minseokp", icon: "bi-github" },
-      { platform: "LinkedIn", url: "https://linkedin.com/in/minseokp", icon: "bi-linkedin" }
+      { platform: "GitHub", url: "https://github.com/minseoka", icon: "bi-github" }
     ]
   },
   {
     name: "김민수 [ Ayaan ]",
-    title: "CSO / 전략이사",
+    title: "CSO 전략이사",
     skills: "#기획 #UI/UX #FullStack",
     description: "",
     sns: [
-      { platform: "LinkedIn", url: "https://linkedin.com/in/ayaan", icon: "bi-linkedin" }
+      { platform: "Github", url: "https://github.com/kms0219kms", icon: "bi-github" }
     ]
   },
   {
     name: "하승민 [ NOCSML70 ]",
-    title: "CBO / 사업이사",
+    title: "CBO 사업이사",
     skills: "#기획 #FullStack",
     description: "",
     sns: [
-      { platform: "LinkedIn", url: "https://linkedin.com/in/nocsml70", icon: "bi-linkedin" }
+      { platform: "Instagram", url: "https://instagram.com/nocsml70", icon: "bi-instagram" },
+      { platform: "GitHub", url: "https://github.com/nocsml70", icon: "bi-github" }
     ]
   }
 ];
@@ -63,7 +63,7 @@ const leaders = [
       <div class="flex flex-col md:flex-row md:justify-between md:items-center">
         <!-- 기본 정보 -->
         <div class="flex-1 space-y-1">
-          <h1 class="text-3xl font-extrabold">{{ leader.name }}</h1>
+          <h1 class="text-2xl md:text-3xl font-extrabold">{{ leader.name }}</h1>
           <p class="text-lg font-medium text-gray-600 dark:text-gray-400">{{ leader.title }}</p>
           <p class="text-base text-gray-700 dark:text-gray-300">{{ leader.skills }}</p>
         </div>

@@ -9,7 +9,7 @@ const props = defineProps({
   },
   minFontSize: {
     type: String,
-    default: '2.5rem'
+    default: '2rem'
   }
 });
 
