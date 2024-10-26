@@ -5,38 +5,23 @@
 
     <div class="container max-w-screen-md mx-auto p-4">
         <main v-if="notices.length" class="space-y-3">
-            <RouterLink 
-                v-for="notice in paginatedNotices" 
-                :key="notice.id" 
-                :to="`/media/notices/` + notice.id" 
-                class="block"
-            >
-                <listItem 
-                    :title="notice.title" 
-                    :descOne="getPreview(notice.content)"
-                    :date="formattedDate(notice.createdAt)"
-                    :author="notice.author"
-                >
+            <RouterLink v-for="notice in paginatedNotices" :key="notice.id" :to="`/media/notices/` + notice.id"
+                class="block">
+                <listItem :title="notice.title" :descOne="getPreview(notice.content)"
+                    :date="formattedDate(notice.createdAt)" :author="notice.author">
                     <template #img>
-                        <img 
-                            v-if="notice.banner_image" 
-                            :src="notice.banner_image" 
-                            alt="Notice Image" 
-                            class="h-20 w-20 object-cover rounded"
-                        />
+                        <div v-if="notice.banner_image" class="h-20 w-20">
+                            <img :src="notice.banner_image" alt="notice image"
+                                class="h-full w-full object-cover rounded dark:shadow-gray-800" @error="notice.banner_image = ''" />
+                        </div>
                     </template>
                 </listItem>
             </RouterLink>
-            
-            <Pagination 
-                :totalItems="notices.length" 
-                :current-page="currentPage" 
-                :items-per-page="noticesPerPage" 
-                @page-changed="changePage" 
-                class="mt-8"
-            />
+
+            <Pagination :totalItems="notices.length" :current-page="currentPage" :items-per-page="noticesPerPage"
+                @page-changed="changePage" class="mt-8" />
         </main>
-        
+
         <h1 v-else class="text-2xl text-center font-bold text-gray-600 dark:text-white">No Notices are found</h1>
     </div>
 </template>
