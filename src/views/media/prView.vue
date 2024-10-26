@@ -63,9 +63,13 @@ onMounted(() => {
         <hr class="h-px bg-gray-300 border-0 my-6 dark:bg-gray-700">
 
         <!-- 이미지 -->
-        <div v-if="pressRelease.banner_image" class="h-40 mb-6">
-            <img :src="pressRelease.banner_image" alt="press release image"
-                class="w-full h-full object-cover rounded-md dark:shadow-gray-800" @error="pressRelease.banner_image = ''" />
+        <div v-if="pressRelease.banner_image" class="w-full max-w-lg h-full mx-auto overflow-hidden rounded-md mb-6">
+            <img 
+                :src="pressRelease.banner_image" 
+                alt="press release image" 
+                class="w-full h-full object-cover" 
+                @error="pressRelease.banner_image = ''"
+            />
         </div>
 
         <!-- 내용 -->
