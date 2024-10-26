@@ -5,7 +5,7 @@ import mainItem from '../components/mainItem.vue'
 </script>
 
 <template>
-  <Hero maxFontSize="3rem" minFontSize="1.3rem">
+  <Hero maxFontSize="3rem" minFontSize="1.5rem">
     <template #head-txt>our light illuminates your night</template>
   </Hero>
 
