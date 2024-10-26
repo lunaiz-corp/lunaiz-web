@@ -49,7 +49,7 @@ onMounted(() => {
         <template #head-txt>notice</template>
     </Hero>
     <main class="container max-w-screen-md mx-auto p-6 text-black dark:text-white">
-        <h1 class="text-2xl md:text-4xl font-bold text-start mb-4 break-words">{{ notice.title }}</h1>
+        <h1 class="text-2xl md:text-3xl font-bold text-start mb-4 break-words">{{ notice.title }}</h1>
         <div class="text-base md:text-lg text-gray-600 mb-4 flex items-center">
             <span class="font-semibold">{{ notice.author }}</span>
             <span class="mx-3">|</span>
