@@ -22,8 +22,8 @@ const props = defineProps({
 <template>
     <div class="flex items-start p-4 max-w-screen-md mx-auto border-b border-gray-300 dark:border-gray-700">
         <!-- 텍스트 콘텐츠 -->
-        <div class="flex-1">
-            <h1 class="text-xl md:text-2xl font-bold break-keep text-black dark:text-white">{{ title }}</h1>
+        <div class="flex-1 min-w-0"> <!-- 텍스트 영역의 최소 너비를 설정하여 이미지가 빠져나오지 않도록 -->
+            <h1 class="text-xl md:text-2xl font-bold truncate-title">{{ title }}</h1>
             <p v-if="date || author" class="text-base mt-1 text-gray-600 dark:text-gray-400">
                 <span v-if="author" class="font-semibold">{{ author }}</span>
                 <span v-if="author && date"> | </span>
@@ -33,16 +33,24 @@ const props = defineProps({
         </div>
 
         <!-- 이미지 슬롯 -->
-        <div class="flex-shrink-0 ml-4">
+        <div v-if="$slots.img" class="flex-shrink-0 ml-4 w-20 h-20 overflow-hidden">
             <slot name="img" />
         </div>
     </div>
 </template>
 
 <style scoped>
-/* descOne 텍스트를 한 줄로 제한하고 넘칠 경우 줄임표 추가 */
+/* 제목이 화면을 초과할 경우 줄임표로 표시 */
+.truncate-title {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* descOne 텍스트도 너비 제한 및 줄임표 표시 */
 .truncate-content {
-    max-width: calc(100% - 5rem);
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
