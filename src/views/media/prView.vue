@@ -6,12 +6,29 @@ import Hero from '../../components/hero.vue'
     <Hero>
         <template #head-txt>press release</template>
     </Hero>
-    <main class="container md:min-w-[30rem] md:max-w-[70rem] items-center justify-around mx-auto p-4 text-black dark:text-white">
-        <h1 class="text-xl text-start font-bold md:text-4xl">{{ pr.title }}</h1>
-        <p class="text-lg ">{{ pr.author }} <span class="mx-3">|</span> {{formattedDate(pr.createdAt)}}</p>
-        <hr class="h-1 my-2 bg-gray-700 border-0 dark:bg-gray-300">
-        <img class="w-screen md:w-[60%] mx-auto rounded" :src="pr.banner_image" />
-        <p class="text-lg break-keep">{{ pr.content }}</p>
+    <main class="container max-w-screen-md mx-auto p-6 text-black dark:text-white">
+        <!-- 제목 -->
+        <h1 class="text-2xl md:text-4xl font-bold text-start mb-4 break-words">{{ pressRelease.title }}</h1>
+        
+        <!-- 작성자와 날짜 -->
+        <div class="text-base md:text-lg text-gray-600 mb-4 flex items-center">
+            <span class="font-semibold">{{ pressRelease.author }}</span>
+            <span class="mx-3">|</span>
+            <span>{{ formattedDate(pressRelease.createdAt) }}</span>
+        </div>
+
+        <!-- 구분선 -->
+        <hr class="h-px bg-gray-300 border-0 my-6 dark:bg-gray-700">
+
+        <!-- 이미지 -->
+        <img v-if="pressRelease.banner_image" 
+             :src="pressRelease.banner_image" 
+             alt="Press Release Image" 
+             class="w-full max-w-lg mx-auto rounded-md mb-6 object-cover shadow-md"
+        />
+
+        <!-- 내용 -->
+        <p class="text-lg leading-relaxed whitespace-pre-wrap break-keep" v-html="pressRelease.content"></p>
     </main>
 </template>
 
@@ -20,20 +37,20 @@ import axios from 'axios';
 import moment from 'moment';
 
 export default {
-    name: 'PRView',
+    name: 'PressReleaseView',
     data() {
         return {
-            pr: {}
+            pressRelease: {}
         };
     },
     created() {
-        const prId = this.$route.params.id;
-        axios.get(`https://api.lunaiz.com/api/v1/press-release/${prId}`)
+        const pressReleaseId = this.$route.params.id;
+        axios.get(`https://api.lunaiz.com/api/v1/press-release/${pressReleaseId}`)
             .then(response => {
-                this.pr = response.data;
+                this.pressRelease = response.data;
             })
             .catch(error => {
-                console.error('There was an error fetching the pr:', error);
+                console.error('There was an error fetching the press release:', error);
             });
     },
     methods: {
@@ -46,4 +63,3 @@ export default {
     }
 };
 </script>
-

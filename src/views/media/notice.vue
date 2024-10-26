@@ -1,69 +1,95 @@
-<script setup>
-import Hero from '../../components/hero.vue'
-import listItem from '../../components/listItem.vue'
-import Pagination from '../../components/pagination.vue'
-import { RouterLink } from 'vue-router'
-import { ref, onMounted } from 'vue'
-import moment from 'moment';
-import axios from 'axios';
-
-const notices = ref([]);
-const currentPage = ref(1);
-const noticesPerPage = 10;
-
-const fetchNotices = async () => {
-    try {
-        const response = await axios.get('https://api.lunaiz.com/api/v1/notice');
-        notices.value = response.data;
-        renderNotices();
-        renderPagination();
-    } catch (error) {
-        console.error('Error fetching notices:', error);
-    }
-};
-
-const formattedDate = (createdAt) => {
-    const date = moment(createdAt);
-    const hours = date.hours();
-    const ampm = hours < 12 ? '오전' : '오후';
-    return `${date.format('YYYY년 MM월 DD일')} ${ampm} ${hours % 12 || 12}시 ${date.minutes()}분`;
-};
-
-const renderNotices = () => {
-    const startIndex = (currentPage.value - 1) * noticesPerPage;
-    const endIndex = startIndex + noticesPerPage;
-    return notices.value.slice(startIndex, endIndex);
-};
-
-const renderPagination = () => {
-    const totalPages = Math.ceil(notices.value.length / noticesPerPage);
-    return Array.from({ length: totalPages }, (_, i) => i + 1);
-};
-
-const changePage = (page) => {
-    if (page < 1 || page > Math.ceil(notices.value.length / noticesPerPage)) {
-        return;
-    }
-    currentPage.value = page;
-};
-
-onMounted(fetchNotices);
-</script>
-
 <template>
     <Hero>
         <template #head-txt>notice</template>
     </Hero>
 
-    <main class="container max-w-screen-xl items-center justify-around mx-auto p-4" v-if="notices.length">
-        <RouterLink :to="`/media/notices/` + notice.id" v-for="notice in renderNotices()" :key="notice.id">
-            <listItem id="notice-list-item" :title="notice.title" :descOne="notice.content"
-                :date="formattedDate(notice.createdAt)">
-                <template #img><img class="h-[7.5rem] rounded" :src="notice.banner_image"></template>
-            </listItem>
-        </RouterLink>
-
-        <Pagination :totalItems="Math.ceil(notices.length / noticesPerPage)" :current-page="currentPage" @page-changed="changePage" />
-    </main>
-    <h1 class="text-2xl text-center font-bold" v-else>No Notices are found</h1>
+    <div class="container max-w-screen-md mx-auto p-4">
+        <main v-if="notices.length" class="space-y-3">
+            <RouterLink 
+                v-for="notice in paginatedNotices" 
+                :key="notice.id" 
+                :to="`/media/notices/` + notice.id" 
+                class="block"
+            >
+                <listItem 
+                    :title="notice.title" 
+                    :descOne="getPreview(notice.content)"
+                    :date="formattedDate(notice.createdAt)"
+                    :author="notice.author"
+                >
+                    <template #img>
+                        <img 
+                            v-if="notice.banner_image" 
+                            :src="notice.banner_image" 
+                            alt="Notice Image" 
+                            class="h-20 w-20 object-cover rounded"
+                        />
+                    </template>
+                </listItem>
+            </RouterLink>
+            
+            <Pagination 
+                :totalItems="notices.length" 
+                :current-page="currentPage" 
+                :items-per-page="noticesPerPage" 
+                @page-changed="changePage" 
+                class="mt-8"
+            />
+        </main>
+        
+        <h1 v-else class="text-2xl text-center font-bold">No Notices are found</h1>
+    </div>
 </template>
+
+<script setup>
+import Hero from '../../components/hero.vue'
+import listItem from '../../components/listItem.vue'
+import Pagination from '../../components/pagination.vue'
+import { RouterLink } from 'vue-router'
+import { ref, onMounted, computed } from 'vue'
+import moment from 'moment'
+import axios from 'axios'
+
+const notices = ref([])
+const currentPage = ref(1)
+const noticesPerPage = 5
+
+const fetchNotices = async () => {
+    try {
+        const response = await axios.get('https://api.lunaiz.com/api/v1/notice')
+        notices.value = response.data.sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        )
+    } catch (error) {
+        console.error('Error fetching notices:', error)
+    }
+}
+
+const formattedDate = (createdAt) => {
+    const date = moment(createdAt)
+    const hours = date.hours()
+    const ampm = hours < 12 ? '오전' : '오후'
+    return `${date.format('YYYY년 MM월 DD일')} ${ampm} ${hours % 12 || 12}시 ${date.minutes()}분`
+}
+
+const getPreview = (content) => {
+    const maxLength = 20
+    return content.length > maxLength ? content.slice(0, maxLength) + '...' : content
+}
+
+const paginatedNotices = computed(() => {
+    const startIndex = (currentPage.value - 1) * noticesPerPage
+    const endIndex = startIndex + noticesPerPage
+    return notices.value.slice(startIndex, endIndex)
+})
+
+const totalPages = computed(() => Math.ceil(notices.value.length / noticesPerPage))
+
+const changePage = (page) => {
+    if (page >= 1 && page <= totalPages.value) {
+        currentPage.value = page
+    }
+}
+
+onMounted(fetchNotices)
+</script>
