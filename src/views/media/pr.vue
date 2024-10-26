@@ -5,38 +5,22 @@
 
     <div class="container max-w-screen-md mx-auto p-4">
         <main v-if="prs.length" class="space-y-3">
-            <RouterLink 
-                v-for="pr in paginatedPrs" 
-                :key="pr.id" 
-                :to="`/media/prs/` + pr.id" 
-                class="block"
-            >
-                <listItem 
-                    :title="pr.title" 
-                    :descOne="getPreview(pr.content)"
-                    :date="formattedDate(pr.createdAt)"
-                    :author="pr.author"
-                >
+            <RouterLink v-for="pr in paginatedPrs" :key="pr.id" :to="`/media/prs/` + pr.id" class="block">
+                <listItem :title="pr.title" :descOne="getPreview(pr.content)" :date="formattedDate(pr.createdAt)"
+                    :author="pr.author">
                     <template #img>
-                        <img 
-                            v-if="pr.banner_image" 
-                            :src="pr.banner_image" 
-                            alt="Press Release Image" 
-                            class="h-20 w-20 object-cover rounded"
-                        />
+                        <div v-if="pr.banner_image" class="h-20 w-20">
+                            <img :src="pr.banner_image" alt="pr image"
+                                class="h-full w-full object-cover rounded dark:shadow-gray-800" @error="pr.banner_image = ''" />
+                        </div>
                     </template>
                 </listItem>
             </RouterLink>
-            
-            <Pagination 
-                :totalItems="prs.length" 
-                :current-page="currentPage" 
-                :items-per-page="pressReleasesPerPage" 
-                @page-changed="changePage" 
-                class="mt-8"
-            />
+
+            <Pagination :totalItems="prs.length" :current-page="currentPage" :items-per-page="pressReleasesPerPage"
+                @page-changed="changePage" class="mt-8" />
         </main>
-        
+
         <h1 v-else class="text-2xl text-center font-bold text-gray-600 dark:text-white">No Press Releases are found</h1>
     </div>
 </template>
