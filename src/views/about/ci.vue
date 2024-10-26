@@ -48,7 +48,7 @@ import hero from '../../components/hero.vue';
     </div>
 
     <!-- 컬러 섹션 -->
-    <section class="pt-8 mt-8 border-t border-gray-900 dark:border-gray-300">
+    <section class="pt-8 mt-4">
       <p class="text-xl md:text-3xl font-bold mb-6">color</p>
       <div class="flex flex-wrap justify-between gap-8">
         <div class="flex-1 md:flex-none md:w-1/3">
