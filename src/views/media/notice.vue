@@ -65,4 +65,5 @@ onMounted(fetchNotices);
 
         <Pagination :totalItems="Math.ceil(notices.length / noticesPerPage)" :current-page="currentPage" @page-changed="changePage" />
     </main>
+    <h1 class="text-2xl text-center font-bold" v-else>No Notices are found</h1>
 </template>
