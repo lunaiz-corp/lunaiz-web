@@ -42,6 +42,7 @@
 </template>
 
 <script setup>
+import { useMeta } from 'vue-meta';
 import Hero from '../../components/hero.vue'
 import listItem from '../../components/listItem.vue'
 import Pagination from '../../components/pagination.vue'
