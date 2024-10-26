@@ -1,32 +1,85 @@
 <script setup>
-import Hero from '../../components/hero.vue'
-import listItem from '../../components/listItem.vue'
+import hero from '../../components/hero.vue';
 
+const leaders = [
+  {
+    name: "손지민 [ SSS1267_ ]",
+    title: "CEO / 대표이사",
+    skills: "#기획 #UI/UX #FrontEnd",
+    description: "",
+    sns: [
+      { platform: "LinkedIn", url: "https://linkedin.com/in/sss1267", icon: "bi-linkedin" },
+      { platform: "Twitter", url: "https://twitter.com/sss1267", icon: "bi-twitter" }
+    ]
+  },
+  {
+    name: "유정호 [ Ddongddi ]",
+    title: "COO / 운영이사",
+    skills: "#기획 #감사 #FrontEnd",
+    description: "",
+    sns: [
+      { platform: "LinkedIn", url: "https://linkedin.com/in/ddongddi", icon: "bi-linkedin" }
+    ]
+  },
+  {
+    name: "권민석 [ MinSeok_P ]",
+    title: "CTO / 기술이사",
+    skills: "#Network #Security #BackEnd",
+    description: "",
+    sns: [
+      { platform: "GitHub", url: "https://github.com/minseokp", icon: "bi-github" },
+      { platform: "LinkedIn", url: "https://linkedin.com/in/minseokp", icon: "bi-linkedin" }
+    ]
+  },
+  {
+    name: "김민수 [ Ayaan ]",
+    title: "CSO / 전략이사",
+    skills: "#기획 #UI/UX #FullStack",
+    description: "",
+    sns: [
+      { platform: "LinkedIn", url: "https://linkedin.com/in/ayaan", icon: "bi-linkedin" }
+    ]
+  },
+  {
+    name: "하승민 [ NOCSML70 ]",
+    title: "CBO / 사업이사",
+    skills: "#기획 #FullStack",
+    description: "",
+    sns: [
+      { platform: "LinkedIn", url: "https://linkedin.com/in/nocsml70", icon: "bi-linkedin" }
+    ]
+  }
+];
 </script>
 
 <template>
-  <Hero>
+  <hero>
     <template #head-txt>leaders of lunaiz</template>
+  </hero>
 
-  </Hero>
+  <main class="container max-w-screen-md mx-auto py-10 px-6 space-y-8 text-black dark:text-white">
+    <!-- 팀원 정보 섹션 -->
+    <section v-for="leader in leaders" :key="leader.name" class="border-b border-gray-300 dark:border-gray-700 pb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+        <!-- 기본 정보 -->
+        <div class="flex-1 space-y-1">
+          <h1 class="text-3xl font-extrabold">{{ leader.name }}</h1>
+          <p class="text-lg font-medium text-gray-600 dark:text-gray-400">{{ leader.title }}</p>
+          <p class="text-base text-gray-700 dark:text-gray-300">{{ leader.skills }}</p>
+        </div>
 
-  <main class="container max-w-screen-xl items-center justify-around mx-auto p-4">
-    <div class="w-full">
-      <listItem title="손지민 &nbsp;&nbsp;[ SSS1267_ ]" descOne="#기획 #UI/UX #FrontEnd">
-        <template #img><h1 class="text-4xl font-bold mx-auto align-middle text-black dark:text-white">C E O</h1><p class="text-lg w-full text-center text-black dark:text-white">대표이사</p></template>
-      </listItem>
-      <listItem title="유정호 &nbsp;&nbsp;[ Ddongddi ]" descOne="#기획 #감사 #FrontEnd">
-        <template #img><h1 class="text-4xl font-bold mx-auto align-middle text-black dark:text-white">C O O</h1><p class="text-lg w-full text-center text-black dark:text-white">운영이사</p></template>
-      </listItem>
-      <listItem title="권민석 &nbsp;&nbsp;[ MinSeok_P ]" descOne="#Network #Security #BackEnd">
-        <template #img><h1 class="text-4xl font-bold mx-auto align-middle text-black dark:text-white">C T O</h1><p class="text-lg w-full text-center text-black dark:text-white">기술이사</p></template>
-      </listItem>
-      <listItem title="김민수 &nbsp;&nbsp;[ Ayaan ]" descOne="#기획 #UI/UX #FullStack">
-        <template #img><h1 class="text-4xl font-bold mx-auto align-middle text-black dark:text-white">C S O</h1><p class="text-lg w-full text-center text-black dark:text-white">전략이사</p></template>
-      </listItem>
-      <listItem title="하승민 &nbsp;&nbsp;[ NOCSML70 ]" descOne="#기획 #FullStack">
-        <template #img><h1 class="text-4xl font-bold mx-auto align-middle text-black dark:text-white">C B O</h1><p class="text-lg w-full text-center text-black dark:text-white">사업이사</p></template>
-      </listItem>
-    </div>
+        <!-- SNS 링크 -->
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a v-for="link in leader.sns" :key="link.platform" :href="link.url" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center space-x-1">
+            <i :class="`bi ${link.icon}`"></i>
+            <span>{{ link.platform }}</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
+
+<style scoped>
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+</style>

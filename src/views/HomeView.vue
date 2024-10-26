@@ -5,9 +5,8 @@ import mainItem from '../components/mainItem.vue'
 </script>
 
 <template>
-  <Hero>
-    <template #head-txt>our ligiht illuminates your night</template>
-
+  <Hero maxFontSize="3rem" minFontSize="1.3rem">
+    <template #head-txt>our light illuminates your night</template>
   </Hero>
 
   <main class="max-w-screen-xl items-center justify-around mx-auto p-4">

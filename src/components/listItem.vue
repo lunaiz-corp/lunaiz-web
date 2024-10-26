@@ -22,8 +22,8 @@ const props = defineProps({
 <template>
     <div class="flex items-start p-4 max-w-screen-md mx-auto border-b border-gray-300 dark:border-gray-700">
         <!-- 텍스트 콘텐츠 -->
-        <div class="flex-1 min-w-0"> <!-- 텍스트 영역의 최소 너비를 설정하여 이미지가 빠져나오지 않도록 -->
-            <h1 class="text-xl md:text-2xl font-bold truncate-title">{{ title }}</h1>
+        <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-bold break-keep truncate-title text-black dark:text-white">{{ title }}</h1>
             <p v-if="date || author" class="text-base mt-1 text-gray-600 dark:text-gray-400">
                 <span v-if="author" class="font-semibold">{{ author }}</span>
                 <span v-if="author && date"> | </span>
