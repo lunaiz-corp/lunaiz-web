@@ -20,16 +20,16 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="flex items-start p-4 max-w-screen-md mx-auto border-b border-gray-300">
+    <div class="flex items-start p-4 max-w-screen-md mx-auto border-b border-gray-300 dark:border-gray-700">
         <!-- 텍스트 콘텐츠 -->
         <div class="flex-1">
-            <h1 class="text-xl md:text-2xl font-bold break-keep">{{ title }}</h1>
-            <p v-if="date || author" class="text-base mt-1 text-gray-600">
+            <h1 class="text-xl md:text-2xl font-bold break-keep text-black dark:text-white">{{ title }}</h1>
+            <p v-if="date || author" class="text-base mt-1 text-gray-600 dark:text-gray-400">
                 <span v-if="author" class="font-semibold">{{ author }}</span>
                 <span v-if="author && date"> | </span>
                 <span v-if="date">{{ date }}</span>
             </p>
-            <p v-if="descOne" class="text-lg mt-1 text-gray-700 truncate-content">{{ descOne }}</p>
+            <p v-if="descOne" class="text-lg mt-1 text-gray-700 dark:text-gray-300 truncate-content">{{ descOne }}</p>
         </div>
 
         <!-- 이미지 슬롯 -->

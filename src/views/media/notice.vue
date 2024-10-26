@@ -37,12 +37,12 @@
             />
         </main>
         
-        <h1 v-else class="text-2xl text-center font-bold">No Notices are found</h1>
+        <h1 v-else class="text-2xl text-center font-bold text-gray-600 dark:text-white">No Notices are found</h1>
     </div>
 </template>
 
 <script setup>
-import { useMeta } from 'vue-meta';
+
 import Hero from '../../components/hero.vue'
 import listItem from '../../components/listItem.vue'
 import Pagination from '../../components/pagination.vue'

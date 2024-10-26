@@ -37,7 +37,7 @@
             />
         </main>
         
-        <h1 v-else class="text-2xl text-center font-bold">No Press Releases are found</h1>
+        <h1 v-else class="text-2xl text-center font-bold text-gray-600 dark:text-white">No Press Releases are found</h1>
     </div>
 </template>
 
