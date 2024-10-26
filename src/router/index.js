@@ -11,6 +11,7 @@ const router = createRouter({
         title: 'lunaiz.',
         ogTitle: 'lunaiz',
         ogDescription: 'our light illuminates your night.',
+        ogImage: 'https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png',
       }
     },
     {
@@ -21,6 +22,7 @@ const router = createRouter({
         title: 'CI | lunaiz.',
         ogTitle: 'CI | lunaiz',
         ogDescription: 'introducing our ci.',
+        ogImage: 'https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png',
       }
     },
     {
@@ -31,6 +33,7 @@ const router = createRouter({
         title: '임원 | lunaiz.',
         ogTitle: '임원 | lunaiz',
         ogDescription: 'our leaders.',
+        ogImage: 'https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png',
       }
     },
     {
@@ -41,6 +44,7 @@ const router = createRouter({
         title: 'notice | lunaiz.',
         ogTitle: 'notice | lunaiz',
         ogDescription: 'check out our notice.',
+        ogImage: 'https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png',
       }
     },
     {
@@ -51,6 +55,7 @@ const router = createRouter({
         title: 'press release | lunaiz.',
         ogTitle: 'press release | lunaiz',
         ogDescription: 'check out our press release.',
+        ogImage: 'https://cdn.lunaiz.com/lunaiz_logo/lunaiz_logo.png',
       }
     },
     {
