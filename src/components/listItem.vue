@@ -23,8 +23,8 @@ const props = defineProps({
   <div class="flex items-start p-4 max-w-screen-md mx-auto border-b border-gray-300 dark:border-gray-700">
     <!-- 텍스트 콘텐츠 -->
     <div class="flex-1">
-      <h1 class="text-xl md:text-2xl font-bold truncate-multiline">{{ title }}</h1>
-      <p v-if="date || author" class="text-base mt-1 text-gray-600">
+      <h1 class="text-xl md:text-2xl font-bold truncate-multiline dark:text-gray-100">{{ title }}</h1>
+      <p v-if="date || author" class="text-base mt-1 text-gray-600 dark:text-gray-400">
         <span v-if="author" class="font-semibold">{{ author }}</span>
         <span v-if="author && date"> | </span>
         <span v-if="date">{{ date }}</span>
