@@ -9,7 +9,8 @@ const leaders = [
     description: "",
     sns: [
       { platform: "Instagram", url: "https://instagram.com/sss1267_", icon: "bi-instagram" },
-      { platform: "Github", url: "https://github.com/Dev-SSS1267", icon: "bi-github" }
+      { platform: "Github", url: "https://github.com/Dev-SSS1267", icon: "bi-github" },
+      { platform: "Website", url: "https://dev-sss1267.github.io/About-Me", icon: "bi-globe2" }
     ]
   },
   {
@@ -36,7 +37,8 @@ const leaders = [
     skills: "#기획 #UI/UX #FullStack",
     description: "",
     sns: [
-      { platform: "Github", url: "https://github.com/kms0219kms", icon: "bi-github" }
+      { platform: "Github", url: "https://github.com/kms0219kms", icon: "bi-github" },
+      { platform: "Website", url: "https://devayaan.me", icon: "bi-globe2" }
     ]
   },
   {
