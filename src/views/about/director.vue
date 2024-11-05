@@ -10,7 +10,7 @@ const leaders = [
     sns: [
       { platform: "Instagram", url: "https://instagram.com/sss1267_", icon: "bi-instagram" },
       { platform: "Github", url: "https://github.com/Dev-SSS1267", icon: "bi-github" },
-      { platform: "Website", url: "https://dev-sss1267.github.io/About-Me", icon: "bi-globe2" }
+      { platform: "Website", url: "https://1267.im", icon: "bi-globe2" }
     ]
   },
   {
